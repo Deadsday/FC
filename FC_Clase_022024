@@ -1,1 +1,3 @@
 from pylab import*
+def primitiva(x,y):
+  Iy = 23*Y
