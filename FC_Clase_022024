@@ -1,3 +1,12 @@
 from pylab import*
+
 def primitiva(x,y):
-  Iy = 23*Y
+  Iy,h = zeros(len(y)), x[1]-x[0]
+  for i in range(1,len(y)-3):
+    Iy[i] = 23*y[i-1]+26*y[i]-4*y[i+1]+6*y[i+2]-3*y[i+3]+Iy[i-1]
+  for i in range(3,0,-1):
+    Iy[-i] = 23*y[-i]+26*y[-i-1]-4*y[-i-2]+6*y[-i-3]-3*y[-i-4]+Iy[-i-1]
+  return Iy*h/48
+
+
+
